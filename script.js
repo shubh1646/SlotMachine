@@ -3,10 +3,10 @@ let value2 = document.getElementById('value2');
 let value3 = document.getElementById('value3');
 
 let btnSpin = $("#btnSpin");
-let values = ['🤭', '🥶', '💩', '👻', '👽', '👾', '🤖', '😈', '💎'];
+let values = ['🤭', '🥶', '💩', '👻', '👽', '👾', '🤖', '😈', '💎','❤️','🤮'];
 
-let inpSpeed = document.getElementById("inpSpeed");
-
+ let inpSpeed = document.getElementById("inpSpeed");
+//let inpSpeed = 5;
 
 
 
@@ -30,7 +30,7 @@ function updatAnimation(newSpeed) {
 
 }
 function getRandomValue() {
-  return values[Math.floor(Math.random() * 8)];
+  return values[Math.floor(Math.random() * 10)];
 };
 
 
@@ -44,7 +44,12 @@ inpSpeed.onchange = function (ev) {
   updatAnimation(ev.target.value);
 }
 
+
+
+
+
 btnSpin.click(() => {
+  updatAnimation(5);
   document.documentElement.style.setProperty('--speed', 1 / 4);
   setTimeout(function () {
     document.documentElement.style.setProperty('--speed', 1 / 5);
